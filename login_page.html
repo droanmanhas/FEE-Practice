@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Login Page</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background-image:url("Website bg.jpg");
+    background-size:cover;
+}
+
+/* Navigation */
+
+nav{
+    background-color:navy;
+    padding:15px;
+}
+
+nav ul{
+    list-style:none;
+    text-align:center;
+}
+
+nav ul li{
+    display:inline;
+    margin:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* Login Box */
+
+.container{
+    width:320px;
+    background-color:white;
+    margin:80px auto;
+    padding:25px;
+    border:1px solid gray;
+    border-radius:10px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+a{
+    text-decoration:none;
+}
+
+.forgot{
+    text-align:right;
+    margin-bottom:15px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background-color:green;
+    color:white;
+    border:none;
+}
+
+button:hover{
+    background-color:darkgreen;
+}
+
+.signup{
+    text-align:center;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h2>User Login</h2>
+
+<label>Email</label><br>
+<input type="email" placeholder="Enter Email">
+
+<label>Password</label><br>
+<input type="password" placeholder="Enter Password">
+
+<div class="forgot">
+<a href="#">Forgot Password?</a>
+</div>
+
+<button>Login</button>
+
+<div class="signup">
+<p>Don't have an account?</p>
+<a href="#">Create Account</a>
+</div>
+
+</div>
+
+</body>
+
+</html>

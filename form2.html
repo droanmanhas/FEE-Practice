@@ -1,1 +1,238 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeVerse Login</title>
 
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 75px;
+            background-color: #111827;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 45px;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul a:hover {
+            color: #38bdf8;
+        }
+
+        .bell {
+            color: white;
+            font-size: 21px;
+            position: relative;
+        }
+
+        .number {
+            position: absolute;
+            top: -9px;
+            right: -10px;
+            background-color: #ef4444;
+            color: white;
+            font-size: 10px;
+            border-radius: 50%;
+            padding: 3px 6px;
+        }
+
+        /* MAIN SECTION */
+
+        .main {
+            min-height: calc(100vh - 75px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .login {
+            width: 360px;
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .login h1 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .input {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input input {
+            width: 100%;
+            padding: 13px;
+            padding-right: 40px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .input input:focus {
+            border: 2px solid #2563eb;
+        }
+
+        .input i {
+            position: absolute;
+            right: 13px;
+            top: 14px;
+            color: #555;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            font-size: 13px;
+        }
+
+        .choices a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .login button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 16px;
+        }
+
+        .login button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .new-user {
+            text-align: center;
+            margin-top: 22px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .new-user a {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            CodeVerse
+        </div>
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+
+        <div class="bell">
+            <i class="fa-solid fa-bell"></i>
+            <span class="number">5</span>
+        </div>
+
+    </nav>
+
+
+    <div class="main">
+
+        <div class="login">
+
+            <h1>Welcome Back</h1>
+
+            <form>
+
+                <div class="input">
+                    <input type="text" placeholder="Enter Username">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input">
+                    <input type="password" placeholder="Enter Password">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="choices">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <button type="submit">
+                    SIGN IN
+                </button>
+
+                <div class="new-user">
+                    <p>
+                        Don't have an account?
+                        <a href="#">Register</a>
+                    </p>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

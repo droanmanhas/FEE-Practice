@@ -1,0 +1,347 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My CSS Practice</title>
+
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            background-color: #e6f2ff;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: #12355b;
+        }
+
+
+        section {
+            margin-top: 45px;
+        }
+
+
+        /* Pseudo Classes */
+
+        button {
+            padding: 10px 22px;
+            font-size: 17px;
+            cursor: pointer;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        button:hover {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+
+        input {
+            padding: 10px;
+            width: 230px;
+            border: 1px solid gray;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+
+        a:link {
+            color: #0066cc;
+        }
+
+        a:visited {
+            color: #8e44ad;
+        }
+
+
+        ul li:first-child {
+            color: green;
+        }
+
+        ul li:last-child {
+            color: red;
+        }
+
+        ul li:nth-child(2) {
+            color: orange;
+        }
+
+
+        /* Pseudo Elements */
+
+        h2::before {
+            content: "★ ";
+            color: orange;
+        }
+
+        h2::after {
+            content: " ✓";
+            color: green;
+        }
+
+        p::first-letter {
+            font-size: 30px;
+            color: darkred;
+        }
+
+        p::first-line {
+            color: #4444aa;
+        }
+
+        ::selection {
+            background-color: #333;
+            color: white;
+        }
+
+
+        /* Position */
+
+        .container {
+            width: 450px;
+            height: 280px;
+            border: 2px solid #222;
+            position: relative;
+            margin-top: 25px;
+            background-color: white;
+        }
+
+
+        .relative {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            color: white;
+
+            position: relative;
+
+            top: 25px;
+            left: 25px;
+
+            text-align: center;
+            padding-top: 10px;
+        }
+
+
+        .absolute {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            position: absolute;
+
+            top: 25px;
+            right: 25px;
+
+            text-align: center;
+            padding-top: 10px;
+        }
+
+
+        /* Fixed */
+
+        .fixed {
+            width: 110px;
+            height: 45px;
+
+            background-color: #333;
+            color: white;
+
+            text-align: center;
+            line-height: 45px;
+
+            position: fixed;
+
+            bottom: 25px;
+            right: 25px;
+        }
+
+
+        /* Sticky */
+
+        .sticky {
+            background-color: #ffd166;
+            padding: 12px;
+            text-align: center;
+
+            position: sticky;
+            top: 0;
+        }
+
+
+        /* Z Index */
+
+        .box1 {
+            width: 140px;
+            height: 140px;
+
+            background-color: tomato;
+
+            position: absolute;
+
+            top: 80px;
+            left: 70px;
+
+            z-index: 1;
+        }
+
+
+        .box2 {
+            width: 140px;
+            height: 140px;
+
+            background-color: royalblue;
+            color: white;
+
+            position: absolute;
+
+            top: 130px;
+            left: 130px;
+
+            z-index: 2;
+
+            text-align: center;
+            padding-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<h1>CSS Practice Page</h1>
+
+
+<div class="sticky">
+    Sticky Menu
+</div>
+
+
+<section>
+
+    <h2>Pseudo Classes</h2>
+
+    <button>
+        Hover Me
+    </button>
+
+    <br><br>
+
+    <input type="text"
+           placeholder="Click inside this box">
+
+    <br><br>
+
+    <a href="https://google.com"
+       target="_blank">
+       Open Google
+    </a>
+
+
+    <ul>
+
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Orange</li>
+
+    </ul>
+
+</section>
+
+
+
+<section>
+
+    <h2>Pseudo Elements</h2>
+
+    <p>
+        This paragraph is used to demonstrate
+        different pseudo elements in CSS.
+        The first letter and first line have
+        different styles.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>Position Practice</h2>
+
+    <div class="container">
+
+        <div class="relative">
+            Relative
+        </div>
+
+        <div class="absolute">
+            Absolute
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section>
+
+    <h2>Using Z-Index</h2>
+
+    <div class="container">
+
+        <div class="box1">
+        </div>
+
+        <div class="box2">
+            On Top
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="fixed">
+    Fixed Box
+</div>
+
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+
+<p>
+    Scroll the page to see how the sticky and
+    fixed elements behave.
+</p>
+
+
+</body>
+
+</html>
+```

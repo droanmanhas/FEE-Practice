@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Meme Website</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background-color: lightblue;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 430px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .heading {
+            background-color: #222;
+            color: white;
+            padding: 18px;
+            font-size: 25px;
+        }
+
+        #memeImage {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            background-color: #eeeeee;
+        }
+
+        #caption {
+            padding: 18px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        button {
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="heading">
+            😂 Meme of the Day
+        </div>
+
+        <img id="memeImage"
+             src="https://i.imgflip.com/7zreem.jpg"
+             alt="Meme">
+
+        <div id="caption">
+            When your code works on the first try!
+        </div>
+
+        <button onclick="nextMeme()">
+            Next Meme
+        </button>
+
+    </div>
+
+
+    <script>
+
+        var memes = [
+
+            {
+                image: "https://i.imgflip.com/7zreem.jpg",
+                text: "When your code works on the first try!"
+            },
+
+            {
+                image: "https://media.makeameme.org/created/me-in-the-39bafea416.jpg",
+                text: "When you look at your code the next morning."
+            },
+
+            {
+                image: "https://i.programmerhumor.io/2023/11/programmerhumor-io-debugging-memes-programming-memes-d28d07c611d4f17.png",
+                text: "I changed one thing... and now there are 258 bugs."
+            },
+
+            {
+                image: "https://i.programmerhumor.io/2025/05/34c0c3737434f1941cb3a1afa6b9730dc0cbc8ef51569152076589e4f20c60fb.jpeg",
+                text: "Class is easy. Homework is harder. Exam is another level!"
+            },
+
+            {
+                image: "https://i.programmerhumor.io/2025/12/141a2f23e2761cbf0631140ba0c27a2259f9188cf156940c8aef45551b3a0a05.jpeg",
+                text: "When the code compiles on the first try."
+            }
+
+        ];
+
+
+        var currentMeme = 0;
+
+
+        function nextMeme() {
+
+            currentMeme = currentMeme + 1;
+
+            if (currentMeme == memes.length) {
+                currentMeme = 0;
+            }
+
+            document.getElementById("memeImage").src =
+                memes[currentMeme].image;
+
+            document.getElementById("caption").innerHTML =
+                memes[currentMeme].text;
+
+        }
+
+    </script>
+
+</body>
+</html>
